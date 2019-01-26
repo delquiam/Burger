@@ -1,9 +1,12 @@
-<h1>Eat da Burger!</h1>
-
 <div class="container">
-    
+    <section id="page-name">
+            
+            <h1>Eat-Da-Burger</h1>
+    </section>
 
-    {{!-- <section class="row"> --}}
+    <section class="row">
+
+    
         <div class="col-md-7 col-left">
             <table>
                 {{#each burgers}}
@@ -22,11 +25,11 @@
         </div>          
     </section>
 
-    <form class="create-form">
+    
         <div class="form-group">
             <label for="name"></label>
             <textarea id="name" name="burger-name" rows="2" cols="40" placeholder="What kind of burger are you craving?"></textarea>
         </div>
-        <button type="submit">Add Burger</button>
-    </form>     
+        <button id="submit">Add Burger</button>
+       
 </div>
