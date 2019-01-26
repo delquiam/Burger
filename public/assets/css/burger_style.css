@@ -3,6 +3,11 @@
     margin: 0;
     box-sizing: border-box;
 }
+img {
+    display: block; 
+     margin-left: auto; 
+    margin-right: auto; 
+}
 
 body{
     font-family: 'Shadows Into Light';
@@ -11,58 +16,21 @@ body{
 
 h1 {
     text-align: center;
+    font-weight:  bold;
 }
-
-.content {
-    margin-top: 4em;
-    overflow: auto;
-    height: 1000px;
+.form-group{
+    text-align:  center;
 }
-
-form {
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding: 20px;
-    width: 500px;
-    align-items: center;
-    margin: 0 auto;
-    position: fixed;
-    left: 0;
-    right: 0;
+#submit{
+    height:20px; 
+    width:100px; 
+    margin: -20px -50px; 
+    position:relative;
+    top:50%; 
+    left:50%;
 }
-
-form .form-group {
-    width: 100%;
-}
-
-form button {
-    width: 100px;
-}
-
- .burger-content {
-    width: 500px;
-    margin: 0 auto;
-    overflow: auto;
-    margin-top: 10em;
-}
-  .content-burger-list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: teal;
-    padding: 10px;
-    height: 90px;
-    border-radius: 4px;
-    margin-top: 20px;
-}
-
-.content .content-burger-list p {
-    font-size: 24px;
-}
-
 #devoured {
+    font-size: 20px;
     float: right;
     max-width: 50%;
     margin: 0px 150px 0px 0px;
@@ -71,8 +39,8 @@ form button {
     padding: 5px;
     border: 2px solid #000;
 }
-
 #notDevoured {
+    font-size:  20px;
     float: left;
     max-width: 50%;
     text-align: left;
@@ -81,4 +49,5 @@ form button {
     padding: 5px;
     border: 2px solid #000;
 }
+
 

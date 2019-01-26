@@ -1,35 +1,41 @@
 <div class="container">
-    <section id="page-name">
-            
-            <h1>Eat-Da-Burger</h1>
-    </section>
-
-    <section class="row">
-
-    
-        <div class="col-md-7 col-left">
-            <table>
-                {{#each burgers}}
-                    {{#unless devoured}}
-                        {{> burgers/burger-block devoured=true}}
-                    {{/unless}}
-                {{/each}}
-            </table>
-        </div>
-        <div class="col-md-5 col-right">
-            {{#each burgers}}
-                {{#if devoured}}
-                    <div>{{id}}. {{burger_name}}</div>
-                {{/if}}
-            {{/each}}        
-        </div>          
-    </section>
-
-    
+    <div class="jumbotron">
+        <h1 class="display-4">
+            Eat-Da-Burger!
+        </h1>
+        <img src="assets/images/burger.jpg" width="400" height="400">
+        <hr class="my-4">
         <div class="form-group">
             <label for="name"></label>
             <textarea id="name" name="burger-name" rows="2" cols="40" placeholder="What kind of burger are you craving?"></textarea>
         </div>
         <button id="submit">Add Burger</button>
-       
+    </div>
+    <section class="row">
+        <div id="notDevoured">
+            <div class="col-md-6 col-left">
+                <table>
+                    {{#each burgers}}
+                    {{#unless devoured}}
+                    {{> burgers/burger-block devoured=true}}
+                    {{/unless}}
+                    {{/each}}
+                </table>
+            </div>
+        </div>
+
+        <div id="devoured">
+            <div class="col-md-6 col-right">
+               
+                {{#each burgers}}
+                {{#if devoured}}
+                <div>{{id}}. {{burger_name}}</div>
+                {{/if}}
+                {{/each}}
+            
+            </div>
+        </div>
+    </section>
+
+
 </div>
